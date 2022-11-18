@@ -1,0 +1,18 @@
+.pink {
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#first-id {
+    color: blue;
+    font-size: 36px;
+}
+
+.large {
+    font-size: 24px;
+}
+#second-id {
+    background-color: lightgreen;
+    font-size: 24px;
+    font-weight: bold;
+}
