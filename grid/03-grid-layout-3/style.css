@@ -5,6 +5,15 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 10% 5% 1fr 5%;
+  grid-template-areas:
+    "head head head head head"
+    "side nav nav nav nav"
+    "side article article article article"
+    "foot foot foot foot foot";
+  gap: 4px;
 }
 
 .container div {
@@ -13,19 +22,47 @@
   font-family: Helvetica;
   font-weight: bold;
   color: white;
+  display: grid;
 }
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  align-items: center;
+  grid-area: head;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.menu {
+  align-self: center;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .sidebar {
   background-color: #FF7755;
+  display: grid;
+  grid-template-rows: repeat(4, 20%);
+  gap: 50px;
+  grid-area: side;
+}
+
+.side-content, .photo {
+  display: grid; 
+  align-items: center;
 }
 
 .sidebar .photo {
@@ -34,8 +71,12 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  max-width: 100%;
 }
 
+.sidebar div {
+  place-content: center;
+}
 
 .sidebar .side-content {
   background-color: white;
@@ -46,15 +87,26 @@
 
 .nav {
   background-color: #FF7755;
+  grid-area: nav;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .article {
   background-color: #bccbde;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-area: article;
 }
 
 .article p {
@@ -68,12 +120,14 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
   color: black;
   font-weight: normal;
   font-size: 14px;
+  padding: 5px;
 }
 
 .card .title {
@@ -83,9 +137,10 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: foot;
 }
 
 .footer p {
   font-size: 13px;
-  font-weight: normal;  
+  font-weight: normal;
 }
