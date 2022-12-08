@@ -25,17 +25,17 @@ html {
 }
 
 .header {
-  background-color: #FFDE22;
+  background-color: #ffde22;
   grid-column: span 2;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #ff7755;
   grid-row: span 2;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #00ddff;
 }
 
 .article {

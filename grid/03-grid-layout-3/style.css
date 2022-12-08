@@ -52,7 +52,7 @@
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #ff7755;
   display: grid;
   gap: 50px;
   grid-area: side;
@@ -85,7 +85,7 @@
 }
 
 .nav {
-  background-color: #FF7755;
+  background-color: #ff7755;
   grid-area: nav;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
   height: 200px;
